@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/menu.css">
+    <script src="js/menu.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital@1&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <link rel="shortcut icon" href="img/logo.png">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand title" href="index.html">HungryHaven</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html?restaurant_id=1">Single Restaurant</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#">Registration</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">All Vendors</a>
+                    </li> -->
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="locationDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Select Location
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="locationDropdown">
+                            <a class="dropdown-item" href="#">Location 1</a>
+                            <a class="dropdown-item" href="#">Location 2</a>
+                            <a class="dropdown-item" href="#">Location 3</a>
+                        </div>
+                    </li> -->
+                </ul>
+                <button class="btn btn-warning" id="linkButton">Restaurant Search</button>
+            </div>
+        </div>
+    </nav>
+    <div class="menu-home">
+        <div id="home-container">
+            <div id="text">
+                <h6>Special Combo Pack</h5>
+                    <h3 class="sub-title">Today's Special Pizza Menu</h3>
+                    <p>"Experience the rich and flavorful cuisine of North India at our restaurant, where authentic
+                        spices and traditional recipes come together to tantalize your taste buds."
+                    </p>
+            </div>
+            <div class="image">
+                <img src="./img/menuBgPizza.png" alt="" class="spin">
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <div class="delicious">
+        <div class="heading">
+            <h6 class="sub-title">Super Delicious</h6>
+            <h1>Super Delicious Deal</h1>
+            <div id="menu-container">
+                <!-- Menu cards will be added here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let selectedRestaurantId;
+
+            // Function to handle the restaurant name link click
+            function restaurantNameClick(event) {
+                event.preventDefault(); // Prevent the default link behavior
+                const link = event.target;
+                const url = new URL(link.href);
+                selectedRestaurantId = url.searchParams.get("restaurant_id");
+                // You can perform other actions here if needed
+            }
+
+            // Add a click event listener to all restaurant name links
+            const restaurantNameLinks = document.querySelectorAll(".rest-name a");
+            restaurantNameLinks.forEach((link) => {
+                link.addEventListener("click", restaurantNameClick);
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
