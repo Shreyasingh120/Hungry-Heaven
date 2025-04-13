@@ -1,0 +1,162 @@
+/* Combined CSS for a navigation bar with transparency */
+.navbar {
+    background-color: rgba(51, 51, 51, 0.5);
+    backdrop-filter: blur(10px);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+.title{
+    font-family: 'amaranth';
+    font-size: larger;
+}
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    background-color: rgba(51, 51, 51, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.btn-warning {
+    background-color: yellow;
+    color: #333;
+    padding: 10px 20px;
+}
+
+/* menu-home*/
+.menu-home{
+    background-image: url("../img/menuBg.png");
+    height: auto;
+    display: flex;
+    justify-content: center;
+    
+}
+#home-container{
+    height: auto;
+    width: auto;
+    display: flex;
+    
+    
+}
+#text{
+    margin-left: 5%;
+    display: flex;
+    height: 80vh;
+    width: 30vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#home-container .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#home-container img{
+    height: auto;
+    width: 30%;
+}
+#text h6{
+    font-weight: bold;
+    font-family: Kaushan Script;
+    font-size: 30px;
+    line-height: 65px;
+    color: #FFFFFF;
+    
+}
+.spin{
+    height: auto;
+    width: 100%;
+    animation: right5231 0.9s linear infinite;
+}
+
+#text p{
+    color: white;
+}
+
+
+
+/* menu */
+.heading {
+    padding: 5vh;
+    padding-bottom: 2vh;
+}
+#menu-container{
+    width: 100;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.delicious{
+    text-align: center;
+}
+/* <div class="sd-card">
+        <div class="img">
+            <img src="img/butterChicken.webp" alt="Butter Chicken">
+        </div>
+        <div class="sd-text">
+            <div class="sd-name">
+                <h4>Butter Chicken</h4>
+                <p class="Price">$14.99</p>
+            </div>
+        </div>
+    </div> */
+.sd-card{
+    border: solid rgb(243, 242, 240) 0.7px;
+    background-color: #f2f2f2;
+    width: auto;
+    height: auto;
+    margin: 0.5%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease,background-color 0.3s ease;
+}
+
+
+.sd-card:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transform: scale(1.05);
+}
+
+.sd-card img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: auto;
+    width: auto;
+}
+
+p{
+    color: #FFCC00;
+}
+
+.sd-text{
+    padding: 2vh;    
+}
+
+/* ultility class */
+.sub-title {
+    color: #FFCC00
+}

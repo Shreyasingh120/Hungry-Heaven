@@ -1,0 +1,109 @@
+/* Combined CSS for a navigation bar with transparency */
+.navbar {
+    background-color: rgba(51, 51, 51, 0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.title{
+    font-family: 'amaranth';
+    font-size: larger;
+}
+
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    padding: 10px 20px;
+}
+
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    background-color: rgba(51, 51, 51, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+.dropdown-item {
+    color: white;
+}
+
+.btn-warning {
+    background-color: yellow;
+    color: #333;
+    padding: 10px 20px;
+}
+#home-image{
+    display: flex;
+    height: auto;
+    width: auto;
+    justify-content: center;
+    margin: 5%;
+}
+
+/* <div class="sd-card">
+    <div class="img"><img src="https://media-assets.swiggy.com/swiggy/image/upload/ fl_lossy,f_auto,q_auto,w_208,h_208,c_fit/5250b1b7e351cec28a29200033eb1c64"
+            alt="Samosas">
+    </div>
+        <div class="sd-text">
+            <div class="sd-name">
+                <h4>Samosas</h4>
+                <p>Taste Of India</p>
+                <p class="sub-title">Price: ₹5.99</p>
+            </div>
+        </div>
+</div> */
+/* .super-category{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+} */
+#menu-container{
+    width: 100;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.sd-card{
+    border: solid rgb(243, 242, 240) 0.7px;
+    width: auto;
+    height: auto;
+    margin: 0.5%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.sd-card:hover{
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    transform: scale(1.05);
+}
+
+.sd-text{
+    padding: 2vh; 
+    transition: background-color 0.3s ease;   
+}
+
+p{
+    font-size: medium;
+    color: black;
+}
+
+.sub-title{
+    color: #FFCC00
+}
